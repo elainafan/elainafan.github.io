@@ -1,0 +1,1281 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="05:正整数的任意进制转换 将 p 进制 n 转换为 q 进制。p 和 q 的取值范围为[2，36]，其中，用到的数码按从小到大依次为：0，1，2，3，4，5，">
+<title>【程序设计实习】第四次上机复盘</title>
+
+<link rel='canonical' href='http://localhost:1313/p/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%AE%9E%E4%B9%A0%E7%AC%AC%E5%9B%9B%E6%AC%A1%E4%B8%8A%E6%9C%BA%E5%A4%8D%E7%9B%98/'>
+
+<link rel="stylesheet" href="/scss/style.min.aca421695e587ad1f6460d7d8dc7eb3301307feeafd7a033a12088623c19aced.css"><meta property='og:title' content="【程序设计实习】第四次上机复盘">
+<meta property='og:description' content="05:正整数的任意进制转换 将 p 进制 n 转换为 q 进制。p 和 q 的取值范围为[2，36]，其中，用到的数码按从小到大依次为：0，1，2，3，4，5，">
+<meta property='og:url' content='http://localhost:1313/p/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%AE%9E%E4%B9%A0%E7%AC%AC%E5%9B%9B%E6%AC%A1%E4%B8%8A%E6%9C%BA%E5%A4%8D%E7%9B%98/'>
+<meta property='og:site_name' content='Elainafan'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-03-30T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-03-30T00:00:00&#43;00:00'/>
+<meta name="twitter:title" content="【程序设计实习】第四次上机复盘">
+<meta name="twitter:description" content="05:正整数的任意进制转换 将 p 进制 n 转换为 q 进制。p 和 q 的取值范围为[2，36]，其中，用到的数码按从小到大依次为：0，1，2，3，4，5，">
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+  
+
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu16818674610739363080.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">😉</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Elainafan</a></h1>
+            <h2 class="site-description">就读于PKU计算机科学与技术专业。我很好奇！</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/elainafan'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#输入">输入</a></li>
+    <li><a href="#输出">输出</a></li>
+    <li><a href="#样例输入">样例输入</a></li>
+    <li><a href="#样例输出">样例输出</a></li>
+  </ol>
+
+  <ol>
+    <li><a href="#描述">描述</a></li>
+    <li><a href="#输入-1">输入</a></li>
+    <li><a href="#输出-1">输出</a></li>
+    <li><a href="#样例输入-1">样例输入</a></li>
+    <li><a href="#样例输出-1">样例输出</a></li>
+  </ol>
+
+  <ol>
+    <li><a href="#描述-1">描述</a></li>
+    <li><a href="#输入-2">输入</a></li>
+    <li><a href="#输出-2">输出</a></li>
+    <li><a href="#样例输入-2">样例输入</a></li>
+    <li><a href="#样例输出-2">样例输出</a></li>
+  </ol>
+
+  <ol>
+    <li><a href="#描述-2">描述</a></li>
+    <li><a href="#输入-3">输入</a></li>
+    <li><a href="#输出-3">输出</a></li>
+    <li><a href="#样例输入-3">样例输入</a></li>
+    <li><a href="#样例输出-3">样例输出</a></li>
+  </ol>
+
+  <ol>
+    <li><a href="#描述-3">描述</a></li>
+    <li><a href="#输入-4">输入</a></li>
+    <li><a href="#输出-4">输出</a></li>
+    <li><a href="#样例输入-4">样例输入</a></li>
+    <li><a href="#样例输出-4">样例输出</a></li>
+  </ol>
+
+  <ol>
+    <li>
+      <ol>
+        <li><a href="#笔者注这题可以用瞪眼法找规律">笔者注：这题可以用瞪眼法找规律</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%AE%9E%E4%B9%A0/" style="background-color: #87CEEB; color: #fff;">
+                程序设计实习
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%AE%9E%E4%B9%A0%E7%AC%AC%E5%9B%9B%E6%AC%A1%E4%B8%8A%E6%9C%BA%E5%A4%8D%E7%9B%98/">【程序设计实习】第四次上机复盘</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2025-03-30</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 5 分钟
+                </time>
+            </div>
+        
+
+           
+
+        <div id="viewCount">
+            <?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg t="1750936805135" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5075" width="200" height="200" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M942.2 486.2C847.4 286.5 704.1 186 512 186c-192.2 0-335.4 100.5-430.2 300.3-7.7 16.2-7.7 35.2 0 51.5C176.6 737.5 319.9 838 512 838c192.2 0 335.4-100.5 430.2-300.3 7.7-16.2 7.7-35 0-51.5zM512 766c-161.3 0-279.4-81.8-362.7-254C232.6 339.8 350.7 258 512 258c161.3 0 279.4 81.8 362.7 254C791.5 684.2 673.4 766 512 766z" p-id="5076" fill="#9CA3AF"></path><path d="M508 336c-97.2 0-176 78.8-176 176s78.8 176 176 176 176-78.8 176-176-78.8-176-176-176z m0 288c-61.9 0-112-50.1-112-112s50.1-112 112-112 112 50.1 112 112-50.1 112-112 112z" p-id="5077" fill="#9CA3AF"></path></svg>
+            <time class="article-time--reading">
+                <span id="vercount_value_page_pv">loading...</span>次
+            </time>
+        </div> 
+
+    </footer>
+    
+
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="05正整数的任意进制转换">05:正整数的任意进制转换
+</h1><p>将 p 进制 n 转换为 q 进制。p 和 q 的取值范围为[2，36]，其中，用到的数码按从小到大依次为：0，1，2，3，4，5，6，7，8，9，A，B，&hellip;，Z，不考虑小写字母。</p>
+<h2 id="输入">输入
+</h2><p>一共1+m 行：<br>
+第1行为 m，表示后面有 m 行（1 &lt;= m &lt;= 60）.<br>
+其后的m行中，每行3个数: 进制p，p进制数n，以及进制 q。<br>
+三个数之间用逗号间隔。<br>
+n 的长度不超过50位。</p>
+<h2 id="输出">输出
+</h2><p>转换后的 q 进制数。</p>
+<h2 id="样例输入">样例输入
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">6
+</span></span><span class="line"><span class="cl">18,2345678A123,18
+</span></span><span class="line"><span class="cl">15,23456,18
+</span></span><span class="line"><span class="cl">12,2345678,20
+</span></span><span class="line"><span class="cl">16,12345678,23
+</span></span><span class="line"><span class="cl">25,3456AB,21
+</span></span><span class="line"><span class="cl">18,AB1234567,22
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="样例输出">样例输出
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">2345678A123
+</span></span><span class="line"><span class="cl">114E0
+</span></span><span class="line"><span class="cl">22B7A4
+</span></span><span class="line"><span class="cl">21A976L
+</span></span><span class="line"><span class="cl">7C2136
+</span></span><span class="line"><span class="cl">22JF0G367
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h1 id="solution">Solution
+</h1><p>就是简单的值 而且python还用不到高精度<br>
+事情在于“0”要特判 直接输出0<br>
+然后上代码：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">n=int(input())
+</span></span><span class="line"><span class="cl">di=[0,1,2,3,4,5,6,7,8,9,&#39;A&#39;,&#39;B&#39;,&#39;C&#39;,&#39;D&#39;,&#39;E&#39;,&#39;F&#39;,&#39;G&#39;,&#39;H&#39;,&#39;I&#39;,&#39;J&#39;,&#39;K&#39;,&#39;L&#39;,&#39;M&#39;,&#39;N&#39;,&#39;O&#39;,&#39;P&#39;,&#39;Q&#39;,&#39;R&#39;,&#39;S&#39;,&#39;T&#39;,&#39;U&#39;,&#39;V&#39;,&#39;W&#39;,&#39;X&#39;,&#39;Y&#39;,&#39;Z&#39;]
+</span></span><span class="line"><span class="cl">dict={&#39;0&#39;:0,&#39;1&#39;:1,&#39;2&#39;:2,&#39;3&#39;:3,&#39;4&#39;:4,&#39;5&#39;:5,&#39;6&#39;:6,&#39;7&#39;:7,&#39;8&#39;:8,&#39;9&#39;:9,&#39;A&#39;:10,&#39;B&#39;:11,&#39;C&#39;:12,&#39;D&#39;:13,&#39;E&#39;:14,&#39;F&#39;:15,&#39;G&#39;:16,&#39;H&#39;:17,&#39;I&#39;:18,&#39;J&#39;:19,&#39;K&#39;:20,&#39;L&#39;:21,&#39;M&#39;:22,&#39;N&#39;:23,&#39;O&#39;:24,&#39;P&#39;:25,&#39;Q&#39;:26,&#39;R&#39;:27,&#39;S&#39;:28,&#39;T&#39;:29,&#39;U&#39;:30,&#39;V&#39;:31,&#39;W&#39;:32,&#39;X&#39;:33,&#39;Y&#39;:34,&#39;Z&#39;:35}
+</span></span><span class="line"><span class="cl">for i in range(0,n):
+</span></span><span class="line"><span class="cl">    lst=input().split(&#39;,&#39;)
+</span></span><span class="line"><span class="cl">    p=int(lst[0])
+</span></span><span class="line"><span class="cl">    x=lst[1]
+</span></span><span class="line"><span class="cl">    q=int(lst[2])
+</span></span><span class="line"><span class="cl">    num=0
+</span></span><span class="line"><span class="cl">    k=1
+</span></span><span class="line"><span class="cl">    l=[]
+</span></span><span class="line"><span class="cl">    t=x[::-1]
+</span></span><span class="line"><span class="cl">    for j in range(0,len(t)):
+</span></span><span class="line"><span class="cl">        num+=k*dict[t[j]]
+</span></span><span class="line"><span class="cl">        k*=p
+</span></span><span class="line"><span class="cl">    if(num==0):
+</span></span><span class="line"><span class="cl">        print(&#39;0&#39;)
+</span></span><span class="line"><span class="cl">        continue
+</span></span><span class="line"><span class="cl">    while(num&gt;0):
+</span></span><span class="line"><span class="cl">        temp=num%q
+</span></span><span class="line"><span class="cl">        l.append(di[temp])
+</span></span><span class="line"><span class="cl">        num//=q
+</span></span><span class="line"><span class="cl">    res=l[::-1]
+</span></span><span class="line"><span class="cl">    for j in res:
+</span></span><span class="line"><span class="cl">        print(j,end=&#39;&#39;)
+</span></span><span class="line"><span class="cl">    print()
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h1 id="06古代密码">06:古代密码
+</h1><h2 id="描述">描述
+</h2><p>古罗马帝国有一个拥有各种部门的强大政府组织。其中一个部门就是保密服务部门。为了保险起见，在省与省之间传递的重要文件中的大写字母是加密的。当时最流行的加密方法是替换和重新排列。<br>
+替换方法是将所有出现的字符替换成其它的字符。有些字符会替换成它自己。例如：替换规则可以是将&rsquo;A&rsquo; 到 &lsquo;Y&rsquo;替换成它的下一个字符，将&rsquo;Z&rsquo;替换成 &lsquo;A&rsquo;，如果原词是 &ldquo;VICTORIOUS&rdquo; 则它变成 &ldquo;WJDUPSJPVT&rdquo;。<br>
+排列方法改变原来单词中字母的顺序。例如：将顺序例如将顺序 &lt; 2 1 5 4 3 7 6 10 9 8 &gt; 应用到 &ldquo;VICTORIOUS&rdquo; 上，则得到&quot;IVOTCIRSUO&quot;。<br>
+人们很快意识到单独应用替换方法或排列方法加密，都是很不保险的。但是如果结合这两种方法，在当时就可以得到非常可靠的加密方法。所以，很多重要信息先使用替换方法加密，再将加密的结果用排列的方法加密。用两种方法结合就可以将&quot;VICTORIOUS&quot; 加密成&quot;JWPUDJSTVP&quot;。<br>
+考古学家最近在一个石台上发现了一些信息。初看起来它们毫无意义，所以有人设想它们可能是用替换和排列的方法被加密了。人们试着解读了石台上的密码，现在他们想检查解读的是否正确。他们需要一个计算机程序来验证，你的任务就是写这个验证程序。</p>
+<h2 id="输入-1">输入
+</h2><p>输入有两行。第一行是石台上的文字。文字中没有空格，并且只有大写英文字母。第二行是被解读出来的加密前的文字。第二行也是由大写英文字母构成的。<br>
+两行字符数目的长度都不超过100。</p>
+<h2 id="输出-1">输出
+</h2><p>如果第二行经过某种加密方法后可以产生第一行的信息，输出 &ldquo;YES&rdquo;，否则输出&quot;NO&quot;。</p>
+<h2 id="样例输入-1">样例输入
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">JWPUDJSTVP
+</span></span><span class="line"><span class="cl">VICTORIOUS
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="样例输出-1">样例输出
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">YES
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h1 id="solution-1">Solution
+</h1><p>既然交换的顺序和原先的字母代替顺序我们都不清楚，那么怎么办？<br>
+能肯定的一点：同一个字母不管怎么弄都还是一样的字母<br>
+那我们只需要对不同的字母计数 然后把字典的键擦除，再比对<br>
+下面看代码：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">x=input()
+</span></span><span class="line"><span class="cl">y=input()
+</span></span><span class="line"><span class="cl">dict_1={}
+</span></span><span class="line"><span class="cl">dict_2={}
+</span></span><span class="line"><span class="cl">for i in range(0,len(x)):
+</span></span><span class="line"><span class="cl">    if x[i] not in dict_1:
+</span></span><span class="line"><span class="cl">        dict_1[x[i]]=1
+</span></span><span class="line"><span class="cl">    else:
+</span></span><span class="line"><span class="cl">        dict_1[x[i]]+=1
+</span></span><span class="line"><span class="cl">for i in range(0,len(y)):
+</span></span><span class="line"><span class="cl">    if y[i] not in dict_2:
+</span></span><span class="line"><span class="cl">        dict_2[y[i]]=1
+</span></span><span class="line"><span class="cl">    else:
+</span></span><span class="line"><span class="cl">        dict_2[y[i]]+=1
+</span></span><span class="line"><span class="cl">list_1=[]
+</span></span><span class="line"><span class="cl">list_2=[]
+</span></span><span class="line"><span class="cl">for i in dict_1.values():
+</span></span><span class="line"><span class="cl">    list_1.append(i)
+</span></span><span class="line"><span class="cl">for i in dict_2.values():
+</span></span><span class="line"><span class="cl">    list_2.append(i)
+</span></span><span class="line"><span class="cl">list_1.sort()
+</span></span><span class="line"><span class="cl">list_2.sort()
+</span></span><span class="line"><span class="cl">flag=1
+</span></span><span class="line"><span class="cl">for i in range(0,max(len(list_1),len(list_2))):
+</span></span><span class="line"><span class="cl">    if list_1[i]==list_2[i]:
+</span></span><span class="line"><span class="cl">        continue
+</span></span><span class="line"><span class="cl">    else:
+</span></span><span class="line"><span class="cl">        flag=0
+</span></span><span class="line"><span class="cl">        break
+</span></span><span class="line"><span class="cl">if flag==0:
+</span></span><span class="line"><span class="cl">    print(&#34;NO&#34;)
+</span></span><span class="line"><span class="cl">else:
+</span></span><span class="line"><span class="cl">    print(&#34;YES&#34;)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h1 id="07啤酒厂选址">07:啤酒厂选址
+</h1><h2 id="描述-1">描述
+</h2><p>海上有一个岛，在环海边上建有一条环岛高速公路，沿着公路有n（5 &lt; n &lt; 10000）个居民点，假设每个居民点有一个编号，从0开始，按顺时针依次从小到大（即，0,1，…，n-1）编号。在岛上啤酒很受青睐。某啤酒企业计划在岛上投资建一个啤酒厂，并根据啤酒需求每天向居住点送啤酒。已知两个相邻的居民点的距离以及每个居住点每天的啤酒需求量（假设每个居住点每天不超过2000桶）。假定每单位长度的路程送一桶啤酒需要的费用恒定（为单位费用）。请问，选择哪一个居民点建啤酒厂，才能使每天送啤酒的费用最小（空车不计费用）。</p>
+<h2 id="输入-2">输入
+</h2><p>第一行：为居民点数目n<br>
+后面为n行，每行为一个居民点的啤酒需求量以及按顺时针离下一个居民点的距离（均为整数,空格间隔），从编号为0的开始，按单增顺次给出。<br>
+注意：后面第n行对应于居民点（n-1)的啤酒需求量以及到编号为0的居民点距离。</p>
+<h2 id="输出-2">输出
+</h2><p>啤酒厂所在的居民点编号以及每天的运输费用，其间以逗号间隔</p>
+<h2 id="样例输入-2">样例输入
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">6
+</span></span><span class="line"><span class="cl">500 10
+</span></span><span class="line"><span class="cl">300 30
+</span></span><span class="line"><span class="cl">350 25
+</span></span><span class="line"><span class="cl">400 60
+</span></span><span class="line"><span class="cl">700 28
+</span></span><span class="line"><span class="cl">200 35
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="样例输出-2">样例输出
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">0,94100
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h1 id="solution-2">Solution
+</h1><p>简单前缀和加上模拟不解释 计概出过一模一样的题目，怕你忘了</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">n=int(input())
+</span></span><span class="line"><span class="cl">d=[0]
+</span></span><span class="line"><span class="cl">l=0
+</span></span><span class="line"><span class="cl">beer=[]
+</span></span><span class="line"><span class="cl">ans=1e8
+</span></span><span class="line"><span class="cl">mi=0
+</span></span><span class="line"><span class="cl">for i in range(1,n+1):
+</span></span><span class="line"><span class="cl">    lst=input().split()
+</span></span><span class="line"><span class="cl">    x=int(lst[0])
+</span></span><span class="line"><span class="cl">    y=int(lst[1])
+</span></span><span class="line"><span class="cl">    if(i!=n):
+</span></span><span class="line"><span class="cl">        d.append(d[i-1]+y)
+</span></span><span class="line"><span class="cl">    beer.append(x)
+</span></span><span class="line"><span class="cl">    l+=y
+</span></span><span class="line"><span class="cl">for i in range(0,n):
+</span></span><span class="line"><span class="cl">    temp=0
+</span></span><span class="line"><span class="cl">    for j in range(0,n):
+</span></span><span class="line"><span class="cl">        if i==j:
+</span></span><span class="line"><span class="cl">            continue
+</span></span><span class="line"><span class="cl">        else:
+</span></span><span class="line"><span class="cl">            temp+=beer[j]*min(abs(d[j]-d[i]),l-abs(d[j]-d[i]))
+</span></span><span class="line"><span class="cl">    if temp&lt;ans:
+</span></span><span class="line"><span class="cl">        mi=i
+</span></span><span class="line"><span class="cl">        ans=temp
+</span></span><span class="line"><span class="cl">print(mi,end=&#39;,&#39;)
+</span></span><span class="line"><span class="cl">print(ans)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h1 id="09minecraft">09:Minecraft
+</h1><h2 id="描述-2">描述
+</h2><p>Minecraft是一个几乎无所不能的沙盒游戏，玩家可以利用游戏内的各种资源进行创造，搭建自己的世界。<br>
+在Minecraft中，基本的建筑元素是边长为1个单位的立方体，Tony想用N个这种小立方体搭建一个长方体，并用他珍藏已久的贴纸对其进行装饰。如果一张贴纸可以贴满小立方体的一个面。那么，他需要用掉多少张贴纸呢？</p>
+<h2 id="输入-3">输入
+</h2><p>一个整数N，表示小明所拥有的小立方体的个数。N不会超过1000。</p>
+<h2 id="输出-3">输出
+</h2><p>一个整数，即小明最少用掉的贴纸有多少张。</p>
+<h2 id="样例输入-3">样例输入
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">9
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="样例输出-3">样例输出
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">30
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h1 id="solution-3">Solution:
+</h1><p>我们要优化时间复杂度 假设最小性</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">n=int(input())
+</span></span><span class="line"><span class="cl">ans=1e8
+</span></span><span class="line"><span class="cl">for i in range(1,n+1):
+</span></span><span class="line"><span class="cl">    if i*i*i&gt;n:
+</span></span><span class="line"><span class="cl">        break
+</span></span><span class="line"><span class="cl">    for j in range(i,n+1):
+</span></span><span class="line"><span class="cl">        for k in range(j,n+1):
+</span></span><span class="line"><span class="cl">            if n==i*j*k:
+</span></span><span class="line"><span class="cl">                ans=min(ans,2*(i*j+j*k+k*i))
+</span></span><span class="line"><span class="cl">print(ans)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h1 id="10猴子吃桃">10:猴子吃桃
+</h1><h2 id="描述-3">描述
+</h2><p>海滩上有一堆桃子，N只猴子来分。第一只猴子把这堆桃子平均分为N份，多了一个，这只猴子把多的一个扔入海中，拿走了一份。第二只猴子接着把剩下的桃子平均分成N份，又多了一个，它同样把多的一个扔入海中，拿走了一份。第三、第四、……，第N只猴子仍是最终剩下的桃子分成N份，扔掉多了的一个，并拿走一份。<br>
+编写程序，输入猴子的数量N，输出海滩上最少的桃子数，使得每只猴子都可吃到桃子。</p>
+<h2 id="输入-4">输入
+</h2><p>一个整数N。</p>
+<h2 id="输出-4">输出
+</h2><p>输出当猴子数量为N时海滩上最少的桃子数。结果保证在int型范围内。</p>
+<h2 id="样例输入-4">样例输入
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">2
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="样例输出-4">样例输出
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">7
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h1 id="solution-4">Solution
+</h1><p>是小学奥数，但是不要被吓到<br>
+计算机是很强的！<br>
+还是个枚举题 但是枚举最终结果太超模了<br>
+所以枚举最后剩下的<br>
+完事</p>
+<ul>
+<li>
+<h3 id="笔者注这题可以用瞪眼法找规律">笔者注：这题可以用瞪眼法找规律
+</h3></li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">n=int(input())
+</span></span><span class="line"><span class="cl">for i in range(1,2147483647):
+</span></span><span class="line"><span class="cl">    ans=i*n+1
+</span></span><span class="line"><span class="cl">    flag=0
+</span></span><span class="line"><span class="cl">    for j in range(0,n-1):
+</span></span><span class="line"><span class="cl">        if ans%(n-1)==0:
+</span></span><span class="line"><span class="cl">            ans=ans*n//(n-1)+1
+</span></span><span class="line"><span class="cl">            if j==n-2:
+</span></span><span class="line"><span class="cl">                flag=1
+</span></span><span class="line"><span class="cl">                break
+</span></span><span class="line"><span class="cl">            else:
+</span></span><span class="line"><span class="cl">                continue
+</span></span><span class="line"><span class="cl">        else:
+</span></span><span class="line"><span class="cl">            break
+</span></span><span class="line"><span class="cl">    if flag==1:
+</span></span><span class="line"><span class="cl">        print(ans)
+</span></span><span class="line"><span class="cl">        break
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
+</section>
+
+
+    
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI&#43;WdtXRGWt2kTvGFasHpSy3SV"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG&#43;vnGctmUb0ZY0l8"crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"integrity="sha384-&#43;VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4&#43;/RRE05"crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+        renderMathInElement(document.body, {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/p/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%AE%9E%E4%B9%A0%E7%AC%AC%E5%8D%81%E6%AC%A1%E4%B8%8A%E6%9C%BA%E5%A4%8D%E7%9B%98/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">【程序设计实习】第十次上机复盘</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%AE%9E%E4%B9%A0%E7%AC%AC%E4%B9%9D%E6%AC%A1%E4%B8%8A%E6%9C%BA%E5%A4%8D%E7%9B%98/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">【程序设计实习】第九次上机复盘</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%AE%9E%E4%B9%A0%E7%AC%AC%E5%85%AB%E6%AC%A1%E4%B8%8A%E6%9C%BA%E5%A4%8D%E7%9B%98/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">【程序设计实习】第八次上机复盘</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%AE%9E%E4%B9%A0%E6%9C%9F%E4%B8%ADc-%E9%83%A8%E5%88%86%E8%A1%A5%E5%85%85%E9%A2%98%E4%BA%8C/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">【程序设计实习】期中C&#43;&#43;部分补充题二</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%AE%9E%E4%B9%A0%E6%9C%9F%E4%B8%ADc-%E9%83%A8%E5%88%86%E8%A1%A5%E5%85%85%E9%A2%98%E4%B8%80/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">【程序设计实习】期中C&#43;&#43;部分补充题一</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <script src="https://utteranc.es/client.js" 
+        repo="elainafan/elainafan.github.io"
+        issue-term="pathname"
+        
+        crossorigin="anonymous"
+        async
+        >
+</script>
+
+<style>
+    .utterances {
+        max-width: unset;
+    }
+</style>
+
+<script>
+    let utterancesLoaded = false;
+
+    function setUtterancesTheme(theme) {
+        let utterances = document.querySelector('.utterances iframe');
+        if (utterances) {
+            utterances.contentWindow.postMessage(
+                {
+                    type: 'set-theme',
+                    theme: `github-${theme}`
+                },
+                'https://utteranc.es'
+            );
+        }
+    }
+
+    addEventListener('message', event => {
+        if (event.origin !== 'https://utteranc.es') return;
+
+        
+        utterancesLoaded = true;
+        setUtterancesTheme(document.documentElement.dataset.scheme)
+    });
+
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (!utterancesLoaded) return;
+        setUtterancesTheme(e.detail)
+    })
+</script>
+
+
+    
+
+    <footer class="site-footer">
+    
+    <section class="running-time">
+    本博客已稳定运行
+    <span id="runningdays" class="running-days"></span>
+    </section>
+
+    
+    <section class="totalcount">
+    
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+    发表了23篇文章 · 
+    总计86.83k字
+    </section>
+
+    <section class="copyright">
+        &copy; 
+        
+        2025 elainafan
+    </section>
+    
+    <section class="powerby">
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    function backToTop() {
+      document.documentElement.scrollIntoView({
+        behavior: 'smooth',
+      })
+    }
+  
+    window.onload = function () {
+      let scrollTop =
+        this.document.documentElement.scrollTop || this.document.body.scrollTop
+      let totopBtn = this.document.getElementById('back-to-top')
+      if (scrollTop > 0) {
+        totopBtn.style.display = 'inline'
+      } else {
+        totopBtn.style.display = 'none'
+      }
+    }
+  
+    window.onscroll = function () {
+      let scrollTop =
+        this.document.documentElement.scrollTop || this.document.body.scrollTop
+      let totopBtn = this.document.getElementById('back-to-top')
+      if (scrollTop < 200) {
+        totopBtn.style.display = 'none'
+      } else {
+        totopBtn.style.display = 'inline'
+        totopBtn.addEventListener('click', backToTop, false)
+      }
+    }
+  </script>
+
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+<script defer src="https://cn.vercount.one/js"></script>
+
+<script>
+    function showHideView() {
+        
+        let viewCounts = document.querySelectorAll("#viewCount");
+        if (viewCounts) {
+            
+            let article =  document.querySelector(".article-page");
+            if (!article) {
+                viewCounts.forEach(ele => {
+                    ele.style.display = 'none';
+                });
+            }
+        }
+    }
+    
+    showHideView();
+</script>
+
+
+
+<script>
+    let s1 = '2025-6-23'; 
+    s1 = new Date(s1.replace(/-/g, "/"));
+    let s2 = new Date();
+    let timeDifference = s2.getTime() - s1.getTime();
+
+    let days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+    let hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    let minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+
+    let result = days + "天" + hours + "小时" + minutes + "分钟";
+    document.getElementById('runningdays').innerHTML = result;
+</script>
+
+
+<a href="#" id="back-to-top" title="返回顶部"></a>
+
+
+<style>
+  #back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 5px;
+    right: 15px;
+    width: 40px;  
+    height: 40px;  
+    border-radius: 50%;  
+    background-color: var(--body-background);
+    box-shadow: var(--shadow-l2);
+    font-size: 20px;  
+    text-align: center;
+    line-height: 38px;  
+    cursor: pointer;
+    transition:
+      transform 0.3s ease,
+      background-color 0.3s ease;  
+  }
+
+  #back-to-top:before {
+    content: "";
+    display: inline-block;
+    position: relative;
+    transform: rotate(135deg);
+    height: 8px;  
+    width: 8px;  
+    border-width: 0 0 2px 2px;
+    border-color: var(--back-to-top-color);
+    border-style: solid;
+  }
+
+  #back-to-top:hover {
+    transform: scale(1.1);  
+    background-color: var(--accent-background);  
+  }
+
+  #back-to-top:hover:before {
+    border-color: var(--accent-color);  
+  }
+
+   
+  @media screen and (max-width: 768px) {
+    #back-to-top {
+      bottom: 5px;
+      right: var(--container-padding);
+      width: 30px;  
+      height: 30px;
+      font-size: 16px;
+      line-height: 32px;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    #back-to-top {
+      bottom: 10px;
+      right: 20px;
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    #back-to-top {
+      bottom: 15px;
+      right: 25px;
+    }
+  }
+
+  @media screen and (min-width: 1536px) {
+    #back-to-top {
+      bottom: 15px;
+      right: 25px;
+       
+    }
+  }
+</style>
+
+    </body>
+</html>

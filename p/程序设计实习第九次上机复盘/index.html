@@ -1,0 +1,1532 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="02:慈善晚宴排座次 描述 富豪们参加慈善晚宴，每个人都要捐款，首先按捐款数目从多到少排座次。 在捐款数目相同的富豪中，名字首字母是&rsquo;">
+<title>【程序设计实习】第九次上机复盘</title>
+
+<link rel='canonical' href='http://localhost:1313/p/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%AE%9E%E4%B9%A0%E7%AC%AC%E4%B9%9D%E6%AC%A1%E4%B8%8A%E6%9C%BA%E5%A4%8D%E7%9B%98/'>
+
+<link rel="stylesheet" href="/scss/style.min.aca421695e587ad1f6460d7d8dc7eb3301307feeafd7a033a12088623c19aced.css"><meta property='og:title' content="【程序设计实习】第九次上机复盘">
+<meta property='og:description' content="02:慈善晚宴排座次 描述 富豪们参加慈善晚宴，每个人都要捐款，首先按捐款数目从多到少排座次。 在捐款数目相同的富豪中，名字首字母是&rsquo;">
+<meta property='og:url' content='http://localhost:1313/p/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%AE%9E%E4%B9%A0%E7%AC%AC%E4%B9%9D%E6%AC%A1%E4%B8%8A%E6%9C%BA%E5%A4%8D%E7%9B%98/'>
+<meta property='og:site_name' content='Elainafan'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-05-25T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-05-25T00:00:00&#43;00:00'/>
+<meta name="twitter:title" content="【程序设计实习】第九次上机复盘">
+<meta name="twitter:description" content="02:慈善晚宴排座次 描述 富豪们参加慈善晚宴，每个人都要捐款，首先按捐款数目从多到少排座次。 在捐款数目相同的富豪中，名字首字母是&rsquo;">
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+  
+
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu16818674610739363080.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">😉</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Elainafan</a></h1>
+            <h2 class="site-description">就读于PKU计算机科学与技术专业。我很好奇！</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/elainafan'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#描述">描述</a></li>
+    <li><a href="#输入">输入</a></li>
+    <li><a href="#输出">输出</a></li>
+    <li><a href="#样例输入">样例输入</a></li>
+    <li><a href="#样例输出">样例输出</a></li>
+    <li><a href="#提示">提示</a></li>
+  </ol>
+
+  <ol>
+    <li><a href="#描述-1">描述</a></li>
+    <li><a href="#输入-1">输入</a></li>
+    <li><a href="#输出-1">输出</a></li>
+    <li><a href="#样例输入-1">样例输入</a></li>
+    <li><a href="#样例输出-1">样例输出</a></li>
+  </ol>
+
+  <ol>
+    <li><a href="#描述-2">描述</a></li>
+    <li><a href="#输入-2">输入</a></li>
+    <li><a href="#输出-2">输出</a></li>
+    <li><a href="#样例输入-2">样例输入</a></li>
+    <li><a href="#样例输出-2">样例输出</a></li>
+    <li><a href="#提示-1">提示</a></li>
+  </ol>
+
+  <ol>
+    <li><a href="#描述-3">描述</a></li>
+    <li><a href="#输入-3">输入</a></li>
+    <li><a href="#输出-3">输出</a></li>
+    <li><a href="#样例输入-3">样例输入</a></li>
+    <li><a href="#样例输出-3">样例输出</a></li>
+    <li><a href="#来源">来源</a></li>
+  </ol>
+
+  <ol>
+    <li><a href="#描述-4">描述</a></li>
+    <li><a href="#输入-4">输入</a></li>
+    <li><a href="#输出-4">输出</a></li>
+    <li><a href="#样例输入-4">样例输入</a></li>
+    <li><a href="#样例输出-4">样例输出</a></li>
+  </ol>
+
+  <ol>
+    <li><a href="#描述-5">描述</a></li>
+    <li><a href="#输入-5">输入</a></li>
+    <li><a href="#输出-5">输出</a></li>
+    <li><a href="#样例输入-5">样例输入</a></li>
+    <li><a href="#样例输出-5">样例输出</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%AE%9E%E4%B9%A0/" style="background-color: #87CEEB; color: #fff;">
+                程序设计实习
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%AE%9E%E4%B9%A0%E7%AC%AC%E4%B9%9D%E6%AC%A1%E4%B8%8A%E6%9C%BA%E5%A4%8D%E7%9B%98/">【程序设计实习】第九次上机复盘</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2025-05-25</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 7 分钟
+                </time>
+            </div>
+        
+
+           
+
+        <div id="viewCount">
+            <?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg t="1750936805135" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5075" width="200" height="200" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M942.2 486.2C847.4 286.5 704.1 186 512 186c-192.2 0-335.4 100.5-430.2 300.3-7.7 16.2-7.7 35.2 0 51.5C176.6 737.5 319.9 838 512 838c192.2 0 335.4-100.5 430.2-300.3 7.7-16.2 7.7-35 0-51.5zM512 766c-161.3 0-279.4-81.8-362.7-254C232.6 339.8 350.7 258 512 258c161.3 0 279.4 81.8 362.7 254C791.5 684.2 673.4 766 512 766z" p-id="5076" fill="#9CA3AF"></path><path d="M508 336c-97.2 0-176 78.8-176 176s78.8 176 176 176 176-78.8 176-176-78.8-176-176-176z m0 288c-61.9 0-112-50.1-112-112s50.1-112 112-112 112 50.1 112 112-50.1 112-112 112z" p-id="5077" fill="#9CA3AF"></path></svg>
+            <time class="article-time--reading">
+                <span id="vercount_value_page_pv">loading...</span>次
+            </time>
+        </div> 
+
+    </footer>
+    
+
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="02慈善晚宴排座次">02:慈善晚宴排座次
+</h1><h2 id="描述">描述
+</h2><p>富豪们参加慈善晚宴，每个人都要捐款，首先按捐款数目从多到少排座次。<br>
+在捐款数目相同的富豪中，名字首字母是&rsquo;P&rsquo;、&lsquo;K&rsquo;或 &lsquo;U&rsquo;的三大传统慈善家族人士，都会排在其它人前面。而捐款相同的传统慈善家族人士互相比较，以及非传统慈善家族人士互相比较时，谁先捐款谁就排在前面。</p>
+<h2 id="输入">输入
+</h2><p>第一行是整数 n , 表示富豪人数 （0 &lt; n &lt; 100）<br>
+接下来n行，每行有一个大写字母字符串和一个整数，分别代表一位富豪的名字和捐款数目。<br>
+先出现的就是先捐款的。</p>
+<h2 id="输出">输出
+</h2><p>按座次前后输出所有富豪名字及其捐款数目。每行一个富豪</p>
+<h2 id="样例输入">样例输入
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">6
+</span></span><span class="line"><span class="cl">SS 10
+</span></span><span class="line"><span class="cl">AE 10
+</span></span><span class="line"><span class="cl">JACK 20
+</span></span><span class="line"><span class="cl">UDI 10
+</span></span><span class="line"><span class="cl">PBC 10
+</span></span><span class="line"><span class="cl">LNO 30
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="样例输出">样例输出
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">LNO 30
+</span></span><span class="line"><span class="cl">JACK 20
+</span></span><span class="line"><span class="cl">UDI 10
+</span></span><span class="line"><span class="cl">PBC 10
+</span></span><span class="line"><span class="cl">SS 10
+</span></span><span class="line"><span class="cl">AE 10
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="提示">提示
+</h2><p>如果sort的key参数写成一个lambda表达式不太容易，就专门写一个key函数，例如叫f。f返回一个构造出来的列表或元组，其中有元素能体现是不是属于三大家族</p>
+<h1 id="solution">Solution
+</h1><p>老师这个给的提示其实没有用<br>
+我们直接用lambda表达式就可以了</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">n=int(input())
+</span></span><span class="line"><span class="cl">ma=[]
+</span></span><span class="line"><span class="cl">for i in range(0,n):
+</span></span><span class="line"><span class="cl">    lst=input().split()
+</span></span><span class="line"><span class="cl">    id=i
+</span></span><span class="line"><span class="cl">    pd=0
+</span></span><span class="line"><span class="cl">    k=lst[0]
+</span></span><span class="line"><span class="cl">    value=int(lst[1])
+</span></span><span class="line"><span class="cl">    if k[0]==&#39;P&#39; or k[0]==&#39;K&#39; or k[0]==&#39;U&#39;:
+</span></span><span class="line"><span class="cl">        pd=1
+</span></span><span class="line"><span class="cl">    ma.append([k,value,pd,id])
+</span></span><span class="line"><span class="cl">ma.sort(key=lambda x:(-x[1],-x[2],x[3]))
+</span></span><span class="line"><span class="cl">for l in ma:
+</span></span><span class="line"><span class="cl">    print(l[0],end=&#39; &#39;)
+</span></span><span class="line"><span class="cl">    print(l[1])
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h1 id="04访问的ip地址">04:访问的ip地址
+</h1><h2 id="描述-1">描述
+</h2><p>某网站统计了最近一段时间访问该网站的ip地址，但是由于意外，访问的记录被打乱了顺序。每一条访问记录包含三个信息：访问次序，访问ip地址，访问是否成功，保证输入数据每一条记录的访问次序均不相同。</p>
+<p>请你统计这一段时间访问了该网站的所有ip地址，并统计每个ip地址的成功访问次数和失败访问次数。输出按照ip地址成功访问次数降序排序，成功访问次数相同的则按失败访问次数降序排序。如果两者均相同则按照每个ip地址的最初访问次序，早的在前，晚的在后。</p>
+<h2 id="输入-1">输入
+</h2><p>第一行是整数n（&lt;=10000），表示记录数量。<br>
+下面n行每行是一条ip地址访问记录，包括访问次序（最早的访问次序从1开始），访问的ip地址，是否成功访问（1为成功，0为失败），用空格隔开。</p>
+<h2 id="输出-1">输出
+</h2><p>多行排序后的结果，每一行包括：ip地址，成功访问的次数，访问失败的次数。</p>
+<h2 id="样例输入-1">样例输入
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">10
+</span></span><span class="line"><span class="cl">6 179.196.37.246 0
+</span></span><span class="line"><span class="cl">4 179.196.37.246 0
+</span></span><span class="line"><span class="cl">7 128.156.5.132 0
+</span></span><span class="line"><span class="cl">5 128.156.5.132 0
+</span></span><span class="line"><span class="cl">8 128.156.5.132 1
+</span></span><span class="line"><span class="cl">2 128.156.5.132 1
+</span></span><span class="line"><span class="cl">9 119.95.172.179 1
+</span></span><span class="line"><span class="cl">3 119.95.172.179 0
+</span></span><span class="line"><span class="cl">1 128.156.5.132 1
+</span></span><span class="line"><span class="cl">10 179.196.37.246 0
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="样例输出-1">样例输出
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">128.156.5.132 3 2
+</span></span><span class="line"><span class="cl">119.95.172.179 1 1
+</span></span><span class="line"><span class="cl">179.196.37.246 0 3
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h1 id="solution-1">Solution
+</h1><p>这里就讲一个，dict.items()，返回的是一个列表，元素是一个元组，元组的第一个元素是键，第二个是值<br>
+字典的值类型也可以是别的数据结构</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">n=int(input())
+</span></span><span class="line"><span class="cl">dict={}
+</span></span><span class="line"><span class="cl">for i in range(0,n):
+</span></span><span class="line"><span class="cl">    lst=input().split()
+</span></span><span class="line"><span class="cl">    x=int(lst[0])
+</span></span><span class="line"><span class="cl">    y=int(lst[2])
+</span></span><span class="line"><span class="cl">    if lst[1] not in dict:
+</span></span><span class="line"><span class="cl">        if y==0:
+</span></span><span class="line"><span class="cl">            dict[lst[1]]=[0,1,x]
+</span></span><span class="line"><span class="cl">        else:
+</span></span><span class="line"><span class="cl">            dict[lst[1]]=[1,0,x]
+</span></span><span class="line"><span class="cl">    else:
+</span></span><span class="line"><span class="cl">        if y==0:
+</span></span><span class="line"><span class="cl">            dict[lst[1]][1]+=1
+</span></span><span class="line"><span class="cl">        else:
+</span></span><span class="line"><span class="cl">            dict[lst[1]][0]+=1
+</span></span><span class="line"><span class="cl">        dict[lst[1]][2]=min(dict[lst[1]][2],x)
+</span></span><span class="line"><span class="cl">dict_2=sorted(dict.items(),key=lambda x:(-x[1][0],-x[1][1],x[1][2]))
+</span></span><span class="line"><span class="cl">for l in dict_2:
+</span></span><span class="line"><span class="cl">    print(l[0],end=&#39; &#39;)
+</span></span><span class="line"><span class="cl">    print(l[1][0],end=&#39; &#39;)
+</span></span><span class="line"><span class="cl">    print(l[1][1])
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h1 id="06逃出迷宫">06:逃出迷宫
+</h1><h2 id="描述-2">描述
+</h2><p>&ldquo;Boom!&rdquo; 小锅一觉醒来发现自己落入了一个N*N(2 &lt;= N &lt;= 20)的迷宫之中，为了逃出这座迷宫，小锅需要从左上角(0, 0)处的入口跑到右下角(N-1, N-1)处的出口逃出迷宫。由于小锅每一步都想缩短和出口之间的距离，所以他只会向右和向下走。假设我们知道迷宫的地图（以0代表通路，以1代表障碍），请你编写一个程序，判断小锅能否从入口跑到出口？</p>
+<h2 id="输入-2">输入
+</h2><p>第一行为一个整数N，代表迷宫的大小<br>
+接下来N行为迷宫地图，迷宫地块之间以空格分隔<br>
+输入保证(0, 0)和(N - 1, N - 1)处可以通过</p>
+<h2 id="输出-2">输出
+</h2><p>一行字符串，如果能跑到出口则输出Yes，否则输出No</p>
+<h2 id="样例输入-2">样例输入
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">5
+</span></span><span class="line"><span class="cl">0 0 1 1 0
+</span></span><span class="line"><span class="cl">0 0 0 0 0
+</span></span><span class="line"><span class="cl">0 1 1 1 0
+</span></span><span class="line"><span class="cl">0 1 1 1 0
+</span></span><span class="line"><span class="cl">0 1 1 1 0
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="样例输出-2">样例输出
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Yes
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="提示-1">提示
+</h2><p>用递归解。设计函数ok(r,c)，返回True或False，表示从位置(r,c)出发能否走到终点。<br>
+从(r,c）出发可以想办法往前走一步，然后看问题变成什么</p>
+<h1 id="solution-2">Solution
+</h1><p>这道题我知道肯定都会写<br>
+但是还是要注意审题，题目写着&quot;只会向右和向下走&quot;</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">def dfs(x,y):
+</span></span><span class="line"><span class="cl">    global n,ma,vis,dx,dy,flag
+</span></span><span class="line"><span class="cl">    if x==n and y==n:
+</span></span><span class="line"><span class="cl">        flag=1
+</span></span><span class="line"><span class="cl">        return 
+</span></span><span class="line"><span class="cl">    for i in range(1,3):
+</span></span><span class="line"><span class="cl">        ax=x+dx[i]
+</span></span><span class="line"><span class="cl">        ay=y+dy[i]
+</span></span><span class="line"><span class="cl">        if ax&gt;=1 and ay&gt;=1 and ax&lt;=n and ay&lt;=n and vis[ax][ay]==0 and ma[ax][ay]==0:
+</span></span><span class="line"><span class="cl">            vis[ax][ay]=1
+</span></span><span class="line"><span class="cl">            dfs(ax,ay)
+</span></span><span class="line"><span class="cl">            vis[ax][ay]=0
+</span></span><span class="line"><span class="cl">n=int(input())
+</span></span><span class="line"><span class="cl">ma=[[]]
+</span></span><span class="line"><span class="cl">vis=[[]]
+</span></span><span class="line"><span class="cl">dx=[0,1,0]
+</span></span><span class="line"><span class="cl">dy=[0,0,1]
+</span></span><span class="line"><span class="cl">for i in range(0,n):
+</span></span><span class="line"><span class="cl">    ma.append([0])
+</span></span><span class="line"><span class="cl">    vis.append([0])
+</span></span><span class="line"><span class="cl">for i in range(1,n+1):
+</span></span><span class="line"><span class="cl">    lst=input().split()
+</span></span><span class="line"><span class="cl">    for j in range(0,n):
+</span></span><span class="line"><span class="cl">        ma[i].append(int(lst[j]))
+</span></span><span class="line"><span class="cl">        vis[i].append(0)
+</span></span><span class="line"><span class="cl">vis[1][1]=1
+</span></span><span class="line"><span class="cl">flag=0
+</span></span><span class="line"><span class="cl">dfs(1,1)
+</span></span><span class="line"><span class="cl">if flag==1:
+</span></span><span class="line"><span class="cl">    print(&#34;Yes&#34;)
+</span></span><span class="line"><span class="cl">else:
+</span></span><span class="line"><span class="cl">    print(&#34;No&#34;)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h1 id="08垂直直方图">08:垂直直方图
+</h1><h2 id="描述-3">描述
+</h2><p>输入4行全部由大写字母组成的文本，输出一个垂直直方图，给出每个字符出现的次数。注意：只用输出字符的出现次数，不用输出空白字符，数字或者标点符号的输出次数。</p>
+<h2 id="输入-3">输入
+</h2><p>输入包括4行由大写字母组成的文本，每行上字符的数目不超过80个。</p>
+<h2 id="输出-3">输出
+</h2><p>输出包括若干行。其中最后一行给出26个大写英文字母，这些字母之间用一个空格隔开。前面的几行包括空格和星号，每个字母出现几次，就在这个字母的上方输出一个星号。注意：输出的第一行不能是空行。</p>
+<h2 id="样例输入-3">样例输入
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG.
+</span></span><span class="line"><span class="cl">THIS IS AN EXAMPLE TO TEST FOR YOUR
+</span></span><span class="line"><span class="cl">HISTOGRAM PROGRAM.
+</span></span><span class="line"><span class="cl">HELLO!
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="样例输出-3">样例输出
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">                            *
+</span></span><span class="line"><span class="cl">                            *
+</span></span><span class="line"><span class="cl">        *                   *
+</span></span><span class="line"><span class="cl">        *                   *     *   *
+</span></span><span class="line"><span class="cl">        *                   *     *   *
+</span></span><span class="line"><span class="cl">*       *     *             *     *   *
+</span></span><span class="line"><span class="cl">*       *     * *     * *   *     * * *
+</span></span><span class="line"><span class="cl">*       *   * * *     * *   * *   * * * *
+</span></span><span class="line"><span class="cl">*     * * * * * *     * * * * *   * * * *     * *
+</span></span><span class="line"><span class="cl">* * * * * * * * * * * * * * * * * * * * * * * * * *
+</span></span><span class="line"><span class="cl">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="来源">来源
+</h2><p>翻译自USACO 2003 February Orange的试题。</p>
+<h1 id="solution-3">Solution
+</h1><p>我的第一反应，竖着输出？我们考虑横着怎么输出<br>
+找到最大的那个数，然后一步步减，如果能输出就输出不就好了？</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">lst=[&#39;A&#39;,&#39;B&#39;,&#39;C&#39;,&#39;D&#39;,&#39;E&#39;,&#39;F&#39;,&#39;G&#39;,&#39;H&#39;,&#39;I&#39;,&#39;J&#39;,&#39;K&#39;,&#39;L&#39;,&#39;M&#39;,&#39;N&#39;,&#39;O&#39;,&#39;P&#39;,&#39;Q&#39;,&#39;R&#39;,&#39;S&#39;,&#39;T&#39;,&#39;U&#39;,&#39;V&#39;,&#39;W&#39;,&#39;X&#39;,&#39;Y&#39;,&#39;Z&#39;]
+</span></span><span class="line"><span class="cl">cnt=[]
+</span></span><span class="line"><span class="cl">for i in range(0,26):
+</span></span><span class="line"><span class="cl">    cnt.append(0)
+</span></span><span class="line"><span class="cl">for i in range(1,5):
+</span></span><span class="line"><span class="cl">    k=input()
+</span></span><span class="line"><span class="cl">    for j in range(0,len(k)):
+</span></span><span class="line"><span class="cl">        if ord(k[j])-ord(&#39;A&#39;)&gt;=0 and ord(k[j])-ord(&#39;A&#39;)&lt;=25:
+</span></span><span class="line"><span class="cl">            cnt[ord(k[j])-ord(&#39;A&#39;)]+=1
+</span></span><span class="line"><span class="cl">ans=0
+</span></span><span class="line"><span class="cl">for i in range(0,26):
+</span></span><span class="line"><span class="cl">    ans=max(ans,cnt[i])
+</span></span><span class="line"><span class="cl">for i in range(0,ans):
+</span></span><span class="line"><span class="cl">    for j in range(0,26):
+</span></span><span class="line"><span class="cl">        if cnt[j]&lt;ans:
+</span></span><span class="line"><span class="cl">            print(&#39; &#39;,end=&#39; &#39;)
+</span></span><span class="line"><span class="cl">        else:
+</span></span><span class="line"><span class="cl">            print(&#39;*&#39;,end=&#39; &#39;)
+</span></span><span class="line"><span class="cl">    print()
+</span></span><span class="line"><span class="cl">    ans-=1
+</span></span><span class="line"><span class="cl">for i in range(0,26):
+</span></span><span class="line"><span class="cl">    print(lst[i],end=&#39; &#39;)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h1 id="09垃圾炸弹">09:垃圾炸弹
+</h1><h2 id="描述-4">描述
+</h2><p>2018年俄罗斯世界杯（2018 FIFA World Cup）开踢啦！为了方便球迷观看比赛，莫斯科街道上很多路口都放置了的直播大屏幕，但是人群散去后总会在这些路口留下一堆垃圾。为此俄罗斯政府决定动用一种最新发明——“垃圾炸弹”。这种“炸弹”利用最先进的量子物理技术，爆炸后产生的冲击波可以完全清除波及范围内的所有垃圾，并且不会产生任何其他不良影响。炸弹爆炸后冲击波是以正方形方式扩散的，炸弹威力（扩散距离）以d给出，表示可以传播d条街道。
+假设莫斯科的布局为严格的1025*1025的网格状，由于财政问题市政府只买得起一枚“垃圾炸弹”，希望你帮他们找到合适的投放地点，使得一次清除的垃圾总量最多（假设垃圾数量可以用一个非负整数表示，并且除设置大屏幕的路口以外的地点没有垃圾）。</p>
+<h2 id="输入-4">输入
+</h2><p>第一行给出“炸弹”威力d(1 &lt;= d &lt;= 50)。第二行给出一个数组n(1 &lt;= n &lt;= 20)表示设置了大屏幕(有垃圾)的路口数目。接下来n行每行给出三个数字x, y, i, 分别代表路口的坐标(x, y)以及垃圾数量i. 点坐标(x, y)保证是有效的（区间在0到1024之间），同一坐标只会给出一次。</p>
+<h2 id="输出-4">输出
+</h2><p>输出能清理垃圾最多的投放点数目，以及能够清除的垃圾总量。</p>
+<h2 id="样例输入-4">样例输入
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">1
+</span></span><span class="line"><span class="cl">2
+</span></span><span class="line"><span class="cl">4 4 10
+</span></span><span class="line"><span class="cl">6 6 20
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="样例输出-4">样例输出
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">1 30
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h1 id="solution-4">Solution
+</h1><p>我们考试一般不会考艰深算法，这点老师强调过了<br>
+那么，直接枚举啊<br>
+就是$O(n*1024^{2})$<br>
+这样当然够</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">d=int(input())
+</span></span><span class="line"><span class="cl">n=int(input())
+</span></span><span class="line"><span class="cl">mx=[]
+</span></span><span class="line"><span class="cl">my=[]
+</span></span><span class="line"><span class="cl">ma=[]
+</span></span><span class="line"><span class="cl">for i in range(0,n):
+</span></span><span class="line"><span class="cl">    k=input().split()
+</span></span><span class="line"><span class="cl">    mx.append(int(k[0]))
+</span></span><span class="line"><span class="cl">    my.append(int(k[1]))
+</span></span><span class="line"><span class="cl">    ma.append(int(k[2]))
+</span></span><span class="line"><span class="cl">ans=0
+</span></span><span class="line"><span class="cl">ret=0
+</span></span><span class="line"><span class="cl">for i in range(0,1025):
+</span></span><span class="line"><span class="cl">    for j in range(0,1025):
+</span></span><span class="line"><span class="cl">        temp=0
+</span></span><span class="line"><span class="cl">        for k in range(0,n):
+</span></span><span class="line"><span class="cl">            if abs(mx[k]-i)&lt;=d and abs(my[k]-j)&lt;=d:
+</span></span><span class="line"><span class="cl">                temp+=ma[k]
+</span></span><span class="line"><span class="cl">        if temp==ans:
+</span></span><span class="line"><span class="cl">            ret+=1
+</span></span><span class="line"><span class="cl">        if temp&gt;ans:
+</span></span><span class="line"><span class="cl">            ret=1
+</span></span><span class="line"><span class="cl">            ans=temp
+</span></span><span class="line"><span class="cl">print(ret,end=&#39; &#39;)
+</span></span><span class="line"><span class="cl">print(ans)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h1 id="10画家问题">10:画家问题
+</h1><h2 id="描述-5">描述
+</h2><p>有一个正方形的墙，由N*N个正方形的砖组成，其中一些砖是白色的，另外一些砖是黄色的。Bob是个画家，想把全部的砖都涂成黄色。但他的画笔不好使。当他用画笔涂画第(i, j)个位置的砖时， 位置(i-1, j)、 (i+1, j)、 (i, j-1)、 (i, j+1)上的砖都会改变颜色。请你帮助Bob计算出最少需要涂画多少块砖，才能使所有砖的颜色都变成黄色。</p>
+<h2 id="输入-5">输入
+</h2><p>第一行是一个整数n (1≤n ≤15)，表示墙的大小。接下来的n行表示墙的初始状态。每一行包含n个字符。第i行的第j个字符表示位于位置(i,j)上的砖的颜色。“w”表示白砖，“y”表示黄砖。</p>
+<h2 id="输出-5">输出
+</h2><p>一行，如果Bob能够将所有的砖都涂成黄色，则输出最少需要涂画的砖数，否则输出“inf”。</p>
+<h2 id="样例输入-5">样例输入
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">5
+</span></span><span class="line"><span class="cl">wwwww
+</span></span><span class="line"><span class="cl">wwwww
+</span></span><span class="line"><span class="cl">wwwww
+</span></span><span class="line"><span class="cl">wwwww
+</span></span><span class="line"><span class="cl">wwwww
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="样例输出-5">样例输出
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">15 
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h1 id="solution-5">Solution
+</h1><p>这道题倒是卡了一下，但是，我们要记住，考暴力，也不过就是有技巧的暴力罢了<br>
+探求规律，会发现：每一层的状态由上一层决定（想想为什么）<br>
+于是，我们直接开始写，注意这里是开关灯题目<br>
+同时，还有一个坑的数据，$n=1$<br>
+下次要注意一下极端数据，尤其是$n=1$这种</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
+</span><span class="lnt">72
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">def dfs(x):
+</span></span><span class="line"><span class="cl">    global n,ma,pa,dx,dy,mi,tem,flag
+</span></span><span class="line"><span class="cl">    for i in range(1,n+1):
+</span></span><span class="line"><span class="cl">        if pa[x-1][i]==0:
+</span></span><span class="line"><span class="cl">            pa[x][i]=(pa[x][i]+1)%2
+</span></span><span class="line"><span class="cl">            tem+=1
+</span></span><span class="line"><span class="cl">            for k in range(1,5):
+</span></span><span class="line"><span class="cl">                ax=x+dx[k]
+</span></span><span class="line"><span class="cl">                ay=i+dy[k]
+</span></span><span class="line"><span class="cl">                if ax&gt;=1 and ay&gt;=1 and ax&lt;=n and ay&lt;=n:
+</span></span><span class="line"><span class="cl">                    pa[ax][ay]=(pa[ax][ay]+1)%2
+</span></span><span class="line"><span class="cl">    if x!=n:
+</span></span><span class="line"><span class="cl">        dfs(x+1) 
+</span></span><span class="line"><span class="cl">    if x==n:
+</span></span><span class="line"><span class="cl">        f=0
+</span></span><span class="line"><span class="cl">        for i in range(1,n+1):
+</span></span><span class="line"><span class="cl">            if pa[n][i]==0:
+</span></span><span class="line"><span class="cl">                return 
+</span></span><span class="line"><span class="cl">        if tem&lt;mi:
+</span></span><span class="line"><span class="cl">            mi=tem
+</span></span><span class="line"><span class="cl">        flag=1
+</span></span><span class="line"><span class="cl">        return 
+</span></span><span class="line"><span class="cl">    return 
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">n=int(input())
+</span></span><span class="line"><span class="cl">ma=[[]]
+</span></span><span class="line"><span class="cl">pa=[[]]
+</span></span><span class="line"><span class="cl">dx=[0,1,-1,0,0]
+</span></span><span class="line"><span class="cl">dy=[0,0,0,1,-1]
+</span></span><span class="line"><span class="cl">mi=9999
+</span></span><span class="line"><span class="cl">tem=0
+</span></span><span class="line"><span class="cl">for i in range(0,n):
+</span></span><span class="line"><span class="cl">    ma.append([0])
+</span></span><span class="line"><span class="cl">    pa.append([0])
+</span></span><span class="line"><span class="cl">for i in range(1,n+1):
+</span></span><span class="line"><span class="cl">    k=input()
+</span></span><span class="line"><span class="cl">    for j in range(0,n):
+</span></span><span class="line"><span class="cl">        if k[j]==&#39;w&#39;:
+</span></span><span class="line"><span class="cl">            ma[i].append(0)
+</span></span><span class="line"><span class="cl">        else:
+</span></span><span class="line"><span class="cl">            ma[i].append(1)
+</span></span><span class="line"><span class="cl">        pa[i].append(0)
+</span></span><span class="line"><span class="cl">for i in range(1,n+1):
+</span></span><span class="line"><span class="cl">    for j in range(1,n+1):
+</span></span><span class="line"><span class="cl">        pa[i][j]=ma[i][j]
+</span></span><span class="line"><span class="cl">if n==1:
+</span></span><span class="line"><span class="cl">    if ma[1][1]==0:
+</span></span><span class="line"><span class="cl">        print(1)
+</span></span><span class="line"><span class="cl">    else:
+</span></span><span class="line"><span class="cl">        print(0)
+</span></span><span class="line"><span class="cl">else:
+</span></span><span class="line"><span class="cl">    flag=0
+</span></span><span class="line"><span class="cl">    for i in range(0,1&lt;&lt;n):
+</span></span><span class="line"><span class="cl">        temp=i
+</span></span><span class="line"><span class="cl">        tem=0
+</span></span><span class="line"><span class="cl">        for j in range(1,n+1):
+</span></span><span class="line"><span class="cl">            if ((temp&gt;&gt;(j-1))&amp;1)==1:
+</span></span><span class="line"><span class="cl">                tem+=1
+</span></span><span class="line"><span class="cl">                pa[1][j]=(pa[1][j]+1)%2
+</span></span><span class="line"><span class="cl">                for k in range(1,5):
+</span></span><span class="line"><span class="cl">                    ax=1+dx[k]
+</span></span><span class="line"><span class="cl">                    ay=j+dy[k]
+</span></span><span class="line"><span class="cl">                    if ax&gt;=1 and ax&lt;=n and ay&gt;=1 and ay&lt;=n:
+</span></span><span class="line"><span class="cl">                        pa[ax][ay]=(pa[ax][ay]+1)%2
+</span></span><span class="line"><span class="cl">        dfs(2)
+</span></span><span class="line"><span class="cl">        for j in range(1,n+1):
+</span></span><span class="line"><span class="cl">            for k in range(1,n+1):
+</span></span><span class="line"><span class="cl">                pa[j][k]=ma[j][k]
+</span></span><span class="line"><span class="cl">    if flag==0:
+</span></span><span class="line"><span class="cl">        print(&#34;inf&#34;)
+</span></span><span class="line"><span class="cl">    else:
+</span></span><span class="line"><span class="cl">        print(mi)
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
+</section>
+
+
+    
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI&#43;WdtXRGWt2kTvGFasHpSy3SV"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG&#43;vnGctmUb0ZY0l8"crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"integrity="sha384-&#43;VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4&#43;/RRE05"crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+        renderMathInElement(document.body, {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/p/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%AE%9E%E4%B9%A0%E7%AC%AC%E5%8D%81%E6%AC%A1%E4%B8%8A%E6%9C%BA%E5%A4%8D%E7%9B%98/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">【程序设计实习】第十次上机复盘</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%AE%9E%E4%B9%A0%E7%AC%AC%E5%85%AB%E6%AC%A1%E4%B8%8A%E6%9C%BA%E5%A4%8D%E7%9B%98/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">【程序设计实习】第八次上机复盘</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%AE%9E%E4%B9%A0%E6%9C%9F%E4%B8%ADc-%E9%83%A8%E5%88%86%E8%A1%A5%E5%85%85%E9%A2%98%E4%BA%8C/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">【程序设计实习】期中C&#43;&#43;部分补充题二</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%AE%9E%E4%B9%A0%E6%9C%9F%E4%B8%ADc-%E9%83%A8%E5%88%86%E8%A1%A5%E5%85%85%E9%A2%98%E4%B8%80/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">【程序设计实习】期中C&#43;&#43;部分补充题一</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%AE%9E%E4%B9%A0c-11%E9%AB%98%E7%BA%A7%E7%89%B9%E6%80%A7%E4%BD%9C%E4%B8%9A/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">【程序设计实习】C&#43;&#43;11高级特性作业</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <script src="https://utteranc.es/client.js" 
+        repo="elainafan/elainafan.github.io"
+        issue-term="pathname"
+        
+        crossorigin="anonymous"
+        async
+        >
+</script>
+
+<style>
+    .utterances {
+        max-width: unset;
+    }
+</style>
+
+<script>
+    let utterancesLoaded = false;
+
+    function setUtterancesTheme(theme) {
+        let utterances = document.querySelector('.utterances iframe');
+        if (utterances) {
+            utterances.contentWindow.postMessage(
+                {
+                    type: 'set-theme',
+                    theme: `github-${theme}`
+                },
+                'https://utteranc.es'
+            );
+        }
+    }
+
+    addEventListener('message', event => {
+        if (event.origin !== 'https://utteranc.es') return;
+
+        
+        utterancesLoaded = true;
+        setUtterancesTheme(document.documentElement.dataset.scheme)
+    });
+
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (!utterancesLoaded) return;
+        setUtterancesTheme(e.detail)
+    })
+</script>
+
+
+    
+
+    <footer class="site-footer">
+    
+    <section class="running-time">
+    本博客已稳定运行
+    <span id="runningdays" class="running-days"></span>
+    </section>
+
+    
+    <section class="totalcount">
+    
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+    发表了23篇文章 · 
+    总计86.83k字
+    </section>
+
+    <section class="copyright">
+        &copy; 
+        
+        2025 elainafan
+    </section>
+    
+    <section class="powerby">
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    function backToTop() {
+      document.documentElement.scrollIntoView({
+        behavior: 'smooth',
+      })
+    }
+  
+    window.onload = function () {
+      let scrollTop =
+        this.document.documentElement.scrollTop || this.document.body.scrollTop
+      let totopBtn = this.document.getElementById('back-to-top')
+      if (scrollTop > 0) {
+        totopBtn.style.display = 'inline'
+      } else {
+        totopBtn.style.display = 'none'
+      }
+    }
+  
+    window.onscroll = function () {
+      let scrollTop =
+        this.document.documentElement.scrollTop || this.document.body.scrollTop
+      let totopBtn = this.document.getElementById('back-to-top')
+      if (scrollTop < 200) {
+        totopBtn.style.display = 'none'
+      } else {
+        totopBtn.style.display = 'inline'
+        totopBtn.addEventListener('click', backToTop, false)
+      }
+    }
+  </script>
+
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+<script defer src="https://cn.vercount.one/js"></script>
+
+<script>
+    function showHideView() {
+        
+        let viewCounts = document.querySelectorAll("#viewCount");
+        if (viewCounts) {
+            
+            let article =  document.querySelector(".article-page");
+            if (!article) {
+                viewCounts.forEach(ele => {
+                    ele.style.display = 'none';
+                });
+            }
+        }
+    }
+    
+    showHideView();
+</script>
+
+
+
+<script>
+    let s1 = '2025-6-23'; 
+    s1 = new Date(s1.replace(/-/g, "/"));
+    let s2 = new Date();
+    let timeDifference = s2.getTime() - s1.getTime();
+
+    let days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+    let hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    let minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+
+    let result = days + "天" + hours + "小时" + minutes + "分钟";
+    document.getElementById('runningdays').innerHTML = result;
+</script>
+
+
+<a href="#" id="back-to-top" title="返回顶部"></a>
+
+
+<style>
+  #back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 5px;
+    right: 15px;
+    width: 40px;  
+    height: 40px;  
+    border-radius: 50%;  
+    background-color: var(--body-background);
+    box-shadow: var(--shadow-l2);
+    font-size: 20px;  
+    text-align: center;
+    line-height: 38px;  
+    cursor: pointer;
+    transition:
+      transform 0.3s ease,
+      background-color 0.3s ease;  
+  }
+
+  #back-to-top:before {
+    content: "";
+    display: inline-block;
+    position: relative;
+    transform: rotate(135deg);
+    height: 8px;  
+    width: 8px;  
+    border-width: 0 0 2px 2px;
+    border-color: var(--back-to-top-color);
+    border-style: solid;
+  }
+
+  #back-to-top:hover {
+    transform: scale(1.1);  
+    background-color: var(--accent-background);  
+  }
+
+  #back-to-top:hover:before {
+    border-color: var(--accent-color);  
+  }
+
+   
+  @media screen and (max-width: 768px) {
+    #back-to-top {
+      bottom: 5px;
+      right: var(--container-padding);
+      width: 30px;  
+      height: 30px;
+      font-size: 16px;
+      line-height: 32px;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    #back-to-top {
+      bottom: 10px;
+      right: 20px;
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    #back-to-top {
+      bottom: 15px;
+      right: 25px;
+    }
+  }
+
+  @media screen and (min-width: 1536px) {
+    #back-to-top {
+      bottom: 15px;
+      right: 25px;
+       
+    }
+  }
+</style>
+
+    </body>
+</html>

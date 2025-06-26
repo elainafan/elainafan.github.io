@@ -1,0 +1,1161 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="A 反向输出一个三位数 描述 将一个三位数反向输出。 输入 一个三位数n。 输出 反向输出n。 样例输入 1 100 样例输出 1 001 Solution 模拟即可 1 2 3 s=input() reverse_s=s[::-1] print(reverse_s) B:字符串中的">
+<title>【程序设计实习】python速通作业一</title>
+
+<link rel='canonical' href='http://localhost:1313/p/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%AE%9E%E4%B9%A0python%E9%80%9F%E9%80%9A%E4%BD%9C%E4%B8%9A%E4%B8%80/'>
+
+<link rel="stylesheet" href="/scss/style.min.aca421695e587ad1f6460d7d8dc7eb3301307feeafd7a033a12088623c19aced.css"><meta property='og:title' content="【程序设计实习】python速通作业一">
+<meta property='og:description' content="A 反向输出一个三位数 描述 将一个三位数反向输出。 输入 一个三位数n。 输出 反向输出n。 样例输入 1 100 样例输出 1 001 Solution 模拟即可 1 2 3 s=input() reverse_s=s[::-1] print(reverse_s) B:字符串中的">
+<meta property='og:url' content='http://localhost:1313/p/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%AE%9E%E4%B9%A0python%E9%80%9F%E9%80%9A%E4%BD%9C%E4%B8%9A%E4%B8%80/'>
+<meta property='og:site_name' content='Elainafan'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-03-12T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-03-12T00:00:00&#43;00:00'/>
+<meta name="twitter:title" content="【程序设计实习】python速通作业一">
+<meta name="twitter:description" content="A 反向输出一个三位数 描述 将一个三位数反向输出。 输入 一个三位数n。 输出 反向输出n。 样例输入 1 100 样例输出 1 001 Solution 模拟即可 1 2 3 s=input() reverse_s=s[::-1] print(reverse_s) B:字符串中的">
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+  
+
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu16818674610739363080.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">😉</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Elainafan</a></h1>
+            <h2 class="site-description">就读于PKU计算机科学与技术专业。我很好奇！</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/elainafan'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#描述">描述</a></li>
+    <li><a href="#输入">输入</a></li>
+    <li><a href="#输出">输出</a></li>
+    <li><a href="#样例输入">样例输入</a></li>
+    <li><a href="#样例输出">样例输出</a></li>
+  </ol>
+
+  <ol>
+    <li><a href="#描述-1">描述</a></li>
+    <li><a href="#输入-1">输入</a></li>
+    <li><a href="#输出-1">输出</a></li>
+    <li><a href="#样例输入-1">样例输入</a></li>
+    <li><a href="#样例输出-1">样例输出</a></li>
+  </ol>
+
+  <ol>
+    <li><a href="#描述-2">描述</a></li>
+    <li><a href="#输入-2">输入</a></li>
+    <li><a href="#输出-2">输出</a></li>
+    <li><a href="#样例输入-2">样例输入</a></li>
+    <li><a href="#样例输出-2">样例输出</a></li>
+  </ol>
+
+  <ol>
+    <li><a href="#描述-3">描述</a></li>
+    <li><a href="#输入-3">输入</a></li>
+    <li><a href="#输出-3">输出</a></li>
+    <li><a href="#样例输入-3">样例输入</a></li>
+    <li><a href="#样例输出-3">样例输出</a></li>
+  </ol>
+
+  <ol>
+    <li><a href="#描述-4">描述</a></li>
+    <li><a href="#输入-4">输入</a></li>
+    <li><a href="#输出-4">输出</a></li>
+    <li><a href="#样例输入-4">样例输入</a></li>
+    <li><a href="#样例输出-4">样例输出</a></li>
+  </ol>
+
+  <ol>
+    <li><a href="#描述-5">描述</a></li>
+    <li><a href="#输入-5">输入</a></li>
+    <li><a href="#输出-5">输出</a></li>
+    <li><a href="#样例输入-5">样例输入</a></li>
+    <li><a href="#样例输出-5">样例输出</a></li>
+    <li><a href="#提示">提示</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%AE%9E%E4%B9%A0/" style="background-color: #87CEEB; color: #fff;">
+                程序设计实习
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%AE%9E%E4%B9%A0python%E9%80%9F%E9%80%9A%E4%BD%9C%E4%B8%9A%E4%B8%80/">【程序设计实习】python速通作业一</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2025-03-12</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 4 分钟
+                </time>
+            </div>
+        
+
+           
+
+        <div id="viewCount">
+            <?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg t="1750936805135" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5075" width="200" height="200" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M942.2 486.2C847.4 286.5 704.1 186 512 186c-192.2 0-335.4 100.5-430.2 300.3-7.7 16.2-7.7 35.2 0 51.5C176.6 737.5 319.9 838 512 838c192.2 0 335.4-100.5 430.2-300.3 7.7-16.2 7.7-35 0-51.5zM512 766c-161.3 0-279.4-81.8-362.7-254C232.6 339.8 350.7 258 512 258c161.3 0 279.4 81.8 362.7 254C791.5 684.2 673.4 766 512 766z" p-id="5076" fill="#9CA3AF"></path><path d="M508 336c-97.2 0-176 78.8-176 176s78.8 176 176 176 176-78.8 176-176-78.8-176-176-176z m0 288c-61.9 0-112-50.1-112-112s50.1-112 112-112 112 50.1 112 112-50.1 112-112 112z" p-id="5077" fill="#9CA3AF"></path></svg>
+            <time class="article-time--reading">
+                <span id="vercount_value_page_pv">loading...</span>次
+            </time>
+        </div> 
+
+    </footer>
+    
+
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="a-反向输出一个三位数">A 反向输出一个三位数
+</h1><h2 id="描述">描述
+</h2><p>将一个三位数反向输出。</p>
+<h2 id="输入">输入
+</h2><p>一个三位数n。</p>
+<h2 id="输出">输出
+</h2><p>反向输出n。</p>
+<h2 id="样例输入">样例输入
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">100
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="样例输出">样例输出
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">001
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h1 id="solution">Solution
+</h1><p>模拟即可</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">s=input()
+</span></span><span class="line"><span class="cl">reverse_s=s[::-1]
+</span></span><span class="line"><span class="cl">print(reverse_s)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h1 id="b字符串中的整数求和">B:字符串中的整数求和
+</h1><h2 id="描述-1">描述
+</h2><p>输入两个长度为3的字符串，每个串前两个字符是数字,后一个字符是字母。<br>
+求这两个串中的整数的和</p>
+<h2 id="输入-1">输入
+</h2><p>一行，两个字符串</p>
+<h2 id="输出-1">输出
+</h2><p>两个字符串中整数的和</p>
+<h2 id="样例输入-1">样例输入
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">12B 34D
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="样例输出-1">样例输出
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">46
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h1 id="solution-1">Solution
+</h1><p>提取列表 再提取数字<br>
+加号的意思是先将字符串拼接 再转化成整数类</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">lst=input().split()
+</span></span><span class="line"><span class="cl">x=int(lst[0][0]+lst[0][1])
+</span></span><span class="line"><span class="cl">y=int(lst[1][0]+lst[1][1])
+</span></span><span class="line"><span class="cl">print(x+y)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h1 id="c点与正方形的关系">C:点与正方形的关系
+</h1><h2 id="描述-2">描述
+</h2><p>有一个正方形，四个角的坐标（x,y)分别是（1，-1），（1，1），（-1，-1），（-1，1），x是横轴，y是纵轴。<br>
+写一个程序，判断一个给定的点是否在这个正方形内（包括正方形边界）。</p>
+<h2 id="输入-2">输入
+</h2><p>输入一行，包括两个整数x、y，以一个空格分开，表示坐标(x,y)。</p>
+<h2 id="输出-2">输出
+</h2><p>输出一行，如果点在正方形内，则输出yes，否则输出no。</p>
+<h2 id="样例输入-2">样例输入
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">1 1
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="样例输出-2">样例输出
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">yes
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h1 id="solution-2">Solution
+</h1><p>根据题意实现即可</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">lst=input().split()
+</span></span><span class="line"><span class="cl">x=int(lst[0])
+</span></span><span class="line"><span class="cl">y=int(lst[1])
+</span></span><span class="line"><span class="cl">if -1&lt;=x&lt;=1 and -1&lt;=y&lt;=1:
+</span></span><span class="line"><span class="cl">    print(&#34;yes&#34;)
+</span></span><span class="line"><span class="cl">else:
+</span></span><span class="line"><span class="cl">    print(&#34;no&#34;)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h1 id="d简单计算器">D:简单计算器
+</h1><h2 id="描述-3">描述
+</h2><p>一个最简单的计算器，支持+, -, *, / 四种运算。仅需考虑输入输出为整数的情况(除法结果就是商，忽略余数）</p>
+<h2 id="输入-3">输入
+</h2><p>输入只有一行，共有三个参数，其中第1、2个参数为整数，第3个参数为操作符（+,-,*,/）。</p>
+<h2 id="输出-3">输出
+</h2><p>输出只有一行，一个整数，为运算结果。然而：</p>
+<ol>
+<li>如果出现除数为0的情况，则输出：Divided by zero!</li>
+<li>如果出现无效的操作符(即不为 +, -, *, / 之一），则输出：Invalid operator!</li>
+</ol>
+<h2 id="样例输入-3">样例输入
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">1 2 +
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="样例输出-3">样例输出
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">3
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h1 id="solution-3">Solution
+</h1><p>根据题意实现即可</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">lst=input().split()
+</span></span><span class="line"><span class="cl">x=int(lst[0])
+</span></span><span class="line"><span class="cl">y=int(lst[1])
+</span></span><span class="line"><span class="cl">z=lst[2]
+</span></span><span class="line"><span class="cl">if z==&#34;+&#34;:
+</span></span><span class="line"><span class="cl">    print(x+y)
+</span></span><span class="line"><span class="cl">elif z==&#39;-&#39;:
+</span></span><span class="line"><span class="cl">    print(x-y)
+</span></span><span class="line"><span class="cl">elif z==&#39;*&#39;:
+</span></span><span class="line"><span class="cl">    print(x*y)
+</span></span><span class="line"><span class="cl">elif z==&#39;/&#39; and y!=0:
+</span></span><span class="line"><span class="cl">    print(x//y)
+</span></span><span class="line"><span class="cl">elif z==&#39;/&#39; and y==0:
+</span></span><span class="line"><span class="cl">    print(&#34;Divided by zero!&#34;)
+</span></span><span class="line"><span class="cl">else:
+</span></span><span class="line"><span class="cl">    print(&#34;Invalid operator!&#34;)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h1 id="e围栏">E:围栏
+</h1><h2 id="描述-4">描述
+</h2><p>小 A 打算新建一幢楼，这幢楼需要占用一块长方形的面积恰好为 n 平方米的土地，且为了方便测量，这块土地的长宽必须为整数米。<br>
+小 A 需要在这幢楼外边修围栏，围栏长度为这块长方形的周长。<br>
+现在想要知道最小的围栏长度。</p>
+<h2 id="输入-4">输入
+</h2><p>第一行一个正整数 n(n ≤ 2 × 109)，表示楼的面积。</p>
+<h2 id="输出-4">输出
+</h2><p>一行一个数表示答案。数据保证答案在int范围内。</p>
+<h2 id="样例输入-4">样例输入
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">2
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="样例输出-4">样例输出
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">6
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h1 id="solution-4">Solution
+</h1><p>根据题意枚举即可</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">import math
+</span></span><span class="line"><span class="cl">s=int(input())
+</span></span><span class="line"><span class="cl">mi=float(&#34;inf&#34;)
+</span></span><span class="line"><span class="cl">for i in range(1,int(math.sqrt(s))+1):
+</span></span><span class="line"><span class="cl">    if s%i==0:
+</span></span><span class="line"><span class="cl">        l=s//i
+</span></span><span class="line"><span class="cl">        c=2*(l+i)
+</span></span><span class="line"><span class="cl">        mi=min(c,mi)
+</span></span><span class="line"><span class="cl">print(mi)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h1 id="f解密">F:解密
+</h1><h2 id="描述-5">描述
+</h2><p>有一种简单的加密算法，对于一个长度为n的字符串，这个算法将会以第(n+1)/2（向下取整）个字符为中间轴(最左边的字符算第1个字符），将该字符写在密文的开头，然后对左半部分按照同样的办法进行加密并写下密文，再对右半部分按照同样的办法进行加密并写下密文。以此类推，直到左右部分为空，即完成加密。<br>
+例如，如果要对12345678进行加密，第一步将选择4作为中间轴，将其写在密文开头，然后继续对左右两边（123和5678）分别继续按这个算法处理并写下，我们可以将其记作4[123][5678]（[]代表待加密处理的部分）。<br>
+对于左半部分123，中间轴是2，左半部分为1，右半部分为3因此加密结果为213（1的中间轴为1，左右均为空，因此结果为1，而3同理）。<br>
+对于右半部分5678，中间轴是6，左半部分为5，右半部分为78，因此加密结果为65[78] → 6578（78的中间轴为7，左半部分为空，右半部分为8，因此得到78）。<br>
+简单来说，整个加密过程如下：<br>
+12345678 → 4[123][5678] → 42[1][3][5678]→ 4213[5678] → 42136[5][78] → 42136578<br>
+因此，对12345678的加密结果为42136578。<br>
+现在给出一个长度为n(1 ≤ n ≤  50000)的由数字构成的字符串，这个字符串是加密后的密文，请你还原出加密前的明文。</p>
+<h2 id="输入-5">输入
+</h2><p>一行，一个长度为n(1 ≤ n ≤ 50000)的由数字构成的字符串字符串，代表加密后的密文。</p>
+<h2 id="输出-5">输出
+</h2><p>一行，一个长度同样为n的字符串，代表解密后的明文。</p>
+<h2 id="样例输入-5">样例输入
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">123456789
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="样例输出-5">样例输出
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">324517689
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="提示">提示
+</h2><p>324517689 → 1[3245][7689] → 12[3][45][7689] → 12345[7689] → 123456[7][89] → 123456789</p>
+<h1 id="solution-5">Solution
+</h1><p>看到题目发现是用递归去做 然后二分指针<br>
+然而在python里面我们不会递归(笔者注：当时老师还没讲)<br>
+然后就查了一下资料：<br>
+注意，列表在函数里是可变对象，而其他不是！（笔者注：函数中可变对象是可变的，而不可变对象只传值）</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">def operate(s):
+</span></span><span class="line"><span class="cl">    n=len(s)
+</span></span><span class="line"><span class="cl">    res=[&#39;&#39;]*n
+</span></span><span class="line"><span class="cl">    index=[0] #采用列表，这样作为可变对象可以传递到外部
+</span></span><span class="line"><span class="cl">    def lower_bound(l,r):
+</span></span><span class="line"><span class="cl">        if l&gt;r:
+</span></span><span class="line"><span class="cl">            return 
+</span></span><span class="line"><span class="cl">        mid=(l+r)//2
+</span></span><span class="line"><span class="cl">        res[mid]=s[index[0]]
+</span></span><span class="line"><span class="cl">        index[0]+=1
+</span></span><span class="line"><span class="cl">        lower_bound(l,mid-1)
+</span></span><span class="line"><span class="cl">        lower_bound(mid+1,r)
+</span></span><span class="line"><span class="cl">    lower_bound(0,n-1)
+</span></span><span class="line"><span class="cl">    return &#39;&#39;.join(res)
+</span></span><span class="line"><span class="cl">u=input()
+</span></span><span class="line"><span class="cl">print(operate(u))
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
+</section>
+
+
+    
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI&#43;WdtXRGWt2kTvGFasHpSy3SV"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG&#43;vnGctmUb0ZY0l8"crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"integrity="sha384-&#43;VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4&#43;/RRE05"crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+        renderMathInElement(document.body, {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/p/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%AE%9E%E4%B9%A0%E7%AC%AC%E5%8D%81%E6%AC%A1%E4%B8%8A%E6%9C%BA%E5%A4%8D%E7%9B%98/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">【程序设计实习】第十次上机复盘</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%AE%9E%E4%B9%A0%E7%AC%AC%E4%B9%9D%E6%AC%A1%E4%B8%8A%E6%9C%BA%E5%A4%8D%E7%9B%98/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">【程序设计实习】第九次上机复盘</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%AE%9E%E4%B9%A0%E7%AC%AC%E5%85%AB%E6%AC%A1%E4%B8%8A%E6%9C%BA%E5%A4%8D%E7%9B%98/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">【程序设计实习】第八次上机复盘</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%AE%9E%E4%B9%A0%E6%9C%9F%E4%B8%ADc-%E9%83%A8%E5%88%86%E8%A1%A5%E5%85%85%E9%A2%98%E4%BA%8C/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">【程序设计实习】期中C&#43;&#43;部分补充题二</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%AE%9E%E4%B9%A0%E6%9C%9F%E4%B8%ADc-%E9%83%A8%E5%88%86%E8%A1%A5%E5%85%85%E9%A2%98%E4%B8%80/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">【程序设计实习】期中C&#43;&#43;部分补充题一</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <script src="https://utteranc.es/client.js" 
+        repo="elainafan/elainafan.github.io"
+        issue-term="pathname"
+        
+        crossorigin="anonymous"
+        async
+        >
+</script>
+
+<style>
+    .utterances {
+        max-width: unset;
+    }
+</style>
+
+<script>
+    let utterancesLoaded = false;
+
+    function setUtterancesTheme(theme) {
+        let utterances = document.querySelector('.utterances iframe');
+        if (utterances) {
+            utterances.contentWindow.postMessage(
+                {
+                    type: 'set-theme',
+                    theme: `github-${theme}`
+                },
+                'https://utteranc.es'
+            );
+        }
+    }
+
+    addEventListener('message', event => {
+        if (event.origin !== 'https://utteranc.es') return;
+
+        
+        utterancesLoaded = true;
+        setUtterancesTheme(document.documentElement.dataset.scheme)
+    });
+
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (!utterancesLoaded) return;
+        setUtterancesTheme(e.detail)
+    })
+</script>
+
+
+    
+
+    <footer class="site-footer">
+    
+    <section class="running-time">
+    本博客已稳定运行
+    <span id="runningdays" class="running-days"></span>
+    </section>
+
+    
+    <section class="totalcount">
+    
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+    发表了23篇文章 · 
+    总计86.83k字
+    </section>
+
+    <section class="copyright">
+        &copy; 
+        
+        2025 elainafan
+    </section>
+    
+    <section class="powerby">
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    function backToTop() {
+      document.documentElement.scrollIntoView({
+        behavior: 'smooth',
+      })
+    }
+  
+    window.onload = function () {
+      let scrollTop =
+        this.document.documentElement.scrollTop || this.document.body.scrollTop
+      let totopBtn = this.document.getElementById('back-to-top')
+      if (scrollTop > 0) {
+        totopBtn.style.display = 'inline'
+      } else {
+        totopBtn.style.display = 'none'
+      }
+    }
+  
+    window.onscroll = function () {
+      let scrollTop =
+        this.document.documentElement.scrollTop || this.document.body.scrollTop
+      let totopBtn = this.document.getElementById('back-to-top')
+      if (scrollTop < 200) {
+        totopBtn.style.display = 'none'
+      } else {
+        totopBtn.style.display = 'inline'
+        totopBtn.addEventListener('click', backToTop, false)
+      }
+    }
+  </script>
+
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+<script defer src="https://cn.vercount.one/js"></script>
+
+<script>
+    function showHideView() {
+        
+        let viewCounts = document.querySelectorAll("#viewCount");
+        if (viewCounts) {
+            
+            let article =  document.querySelector(".article-page");
+            if (!article) {
+                viewCounts.forEach(ele => {
+                    ele.style.display = 'none';
+                });
+            }
+        }
+    }
+    
+    showHideView();
+</script>
+
+
+
+<script>
+    let s1 = '2025-6-23'; 
+    s1 = new Date(s1.replace(/-/g, "/"));
+    let s2 = new Date();
+    let timeDifference = s2.getTime() - s1.getTime();
+
+    let days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+    let hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    let minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+
+    let result = days + "天" + hours + "小时" + minutes + "分钟";
+    document.getElementById('runningdays').innerHTML = result;
+</script>
+
+
+<a href="#" id="back-to-top" title="返回顶部"></a>
+
+
+<style>
+  #back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 5px;
+    right: 15px;
+    width: 40px;  
+    height: 40px;  
+    border-radius: 50%;  
+    background-color: var(--body-background);
+    box-shadow: var(--shadow-l2);
+    font-size: 20px;  
+    text-align: center;
+    line-height: 38px;  
+    cursor: pointer;
+    transition:
+      transform 0.3s ease,
+      background-color 0.3s ease;  
+  }
+
+  #back-to-top:before {
+    content: "";
+    display: inline-block;
+    position: relative;
+    transform: rotate(135deg);
+    height: 8px;  
+    width: 8px;  
+    border-width: 0 0 2px 2px;
+    border-color: var(--back-to-top-color);
+    border-style: solid;
+  }
+
+  #back-to-top:hover {
+    transform: scale(1.1);  
+    background-color: var(--accent-background);  
+  }
+
+  #back-to-top:hover:before {
+    border-color: var(--accent-color);  
+  }
+
+   
+  @media screen and (max-width: 768px) {
+    #back-to-top {
+      bottom: 5px;
+      right: var(--container-padding);
+      width: 30px;  
+      height: 30px;
+      font-size: 16px;
+      line-height: 32px;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    #back-to-top {
+      bottom: 10px;
+      right: 20px;
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    #back-to-top {
+      bottom: 15px;
+      right: 25px;
+    }
+  }
+
+  @media screen and (min-width: 1536px) {
+    #back-to-top {
+      bottom: 15px;
+      right: 25px;
+       
+    }
+  }
+</style>
+
+    </body>
+</html>
